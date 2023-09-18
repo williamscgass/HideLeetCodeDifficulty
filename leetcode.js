@@ -27,7 +27,8 @@ for (const difficulty of diffulties) {
 
 const colors = [{color: "olive", difficulty:"easy"}, {color: "yellow", difficulty:"medium"}, {color: "pink", difficulty:"hard"}];
 for (const color of colors) {
-    waitForElm(`.text-${color.name}`).then((elm) => {
+    waitForElm(`.text-${color.color}`).then((elm) => {
+        console.log(elm.innerText.toLowerCase());
         if (elm.innerText.toLowerCase() === color.difficulty) {
             elm.remove();
         }
