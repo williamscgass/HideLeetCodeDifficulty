@@ -24,3 +24,12 @@ for (const difficulty of diffulties) {
     elm.remove();
   });
 }
+
+const colors = [{color: "olive", difficulty:"easy"}, {color: "yellow", difficulty:"medium"}, {color: "pink", difficulty:"hard"}];
+for (const color of colors) {
+    waitForElm(`.text-${color.name}`).then((elm) => {
+        if (elm.innerText.toLowerCase() === color.difficulty) {
+            elm.remove();
+        }
+    });
+}
