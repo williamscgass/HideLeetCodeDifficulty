@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Hide LeetCode Difficulty",
+    "version": "1.2.0",
+
+    "content_scripts": [
+        {
+          "js": ["leetcode.js"],
+          "matches": ["https://leetcode.com/problems/*"]
+        }
+      ]
+  }
